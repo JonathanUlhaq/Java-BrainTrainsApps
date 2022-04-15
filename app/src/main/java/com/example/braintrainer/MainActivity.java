@@ -88,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
 
+                gameplay.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out));
+
                 gameplay.setVisibility(View.INVISIBLE);
                 correct = findViewById(R.id.correct);
 
@@ -131,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
             });
         } catch (Exception e)
         {
+            gameplay.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out));
+            gameplay.setVisibility(View.INVISIBLE);
+
             papanSkor.setVisibility(View.VISIBLE);
             timer.setText("0s");
             correct.setText("Your Score: "+ Integer.toString(score) + " / " + Integer.toString(nomorSoal));
@@ -162,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onFinish() {
+                            gameplay.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out));
+                            gameplay.setVisibility(View.INVISIBLE);
                             papanSkor.setVisibility(View.VISIBLE);
                             timer.setText("0s");
                             correct.setText("Your Score: "+ Integer.toString(score) + " / " + Integer.toString(nomorSoal));
