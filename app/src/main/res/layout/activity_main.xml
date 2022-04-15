@@ -13,6 +13,7 @@
         android:visibility="visible"
         android:background="#5F67EC"
         android:padding="20dp"
+        android:weightSum="3"
         android:orientation="vertical"
         android:id="@+id/landing"
         app:layout_constraintEnd_toEndOf="@+id/gameplay"
@@ -25,13 +26,13 @@
             android:textStyle="bold"
             android:autoSizeTextType="uniform"
             android:textSize="50sp"
-            android:layout_marginTop="10dp"
             android:gravity="center"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_gravity="center"
+            android:layout_weight="1"
             android:src="@drawable/ilus" />
 
         <TextView
@@ -58,10 +59,11 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/ic_buton"
             android:theme="@style/Theme.warna"
             android:text="MULAI !"
+
             android:textColor="#FFF"
 
             android:id="@+id/mulai"
@@ -137,6 +139,7 @@
             android:text="10 + 1"
             android:autoSizeTextType="uniform"
             android:textColor="#FFF"
+            android:backgroundTint="#DD62FF"
             android:background="@drawable/score"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -152,8 +155,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.53">
+            app:layout_constraintTop_toBottomOf="@+id/sum"
+            app:layout_constraintVertical_bias="0.2">
 
             <Button
                 android:id="@+id/button"
@@ -161,11 +164,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/rounded2"
-                android:onClick="jawaban"
                 android:gravity="center"
+                android:onClick="jawaban"
                 android:tag="0"
-                android:textColor="#FFF"
                 android:text="3"
+                android:textColor="#FFF"
                 android:textSize="80sp"
                 app:layout_column="0"
                 app:layout_columnWeight="1"
@@ -179,13 +182,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/rounded1"
+                android:gravity="center"
                 android:onClick="jawaban"
                 android:tag="1"
-                android:textColor="#FFF"
                 android:text="3"
+                android:textColor="#FFF"
                 android:textSize="80sp"
                 app:layout_column="1"
-                android:gravity="center"
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
                 app:layout_row="0"
@@ -196,8 +199,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:onClick="jawaban"
                 android:background="@drawable/rounded"
+                android:gravity="center"
+                android:onClick="jawaban"
                 android:tag="2"
                 android:text="3"
                 android:textColor="#FFF"
@@ -206,7 +210,6 @@
                 app:layout_columnWeight="1"
                 app:layout_gravity="fill"
                 app:layout_row="1"
-                android:gravity="center"
                 app:layout_rowWeight="1" />
 
             <Button
@@ -214,8 +217,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:gravity="center"
                 android:background="@drawable/rounded3"
+                android:gravity="center"
                 android:onClick="jawaban"
                 android:tag="3"
                 android:text="3"
