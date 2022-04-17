@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     public void jawaban(View view)
     {
 
-        points = findViewById(R.id.point);
+
 
             if(view.getTag().toString().equals(Integer.toString(lokasiJawaban)))
             {
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 gameplay.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out));
 
                 gameplay.setVisibility(View.INVISIBLE);
-                correct = findViewById(R.id.correct);
+
 
                 papanSkor.setVisibility(View.VISIBLE);
                 timer.setText("0s");
@@ -118,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
         mulai = findViewById(R.id.mulai);
         points = findViewById(R.id.point);
         konfirm = findViewById(R.id.konfirm);
+        correct = findViewById(R.id.correct);
+
 
         generateSoal();
 
