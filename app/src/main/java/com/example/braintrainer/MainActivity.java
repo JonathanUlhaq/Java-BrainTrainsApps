@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     Button mulai,button,button1,button2,button3,again;
-    TextView sum,timer,correct,points;
+    TextView sum,timer,correct,points,konfirm;
     ConstraintLayout gameplay;
     LinearLayout landing,papanSkor;
     ArrayList<Integer> jawaban = new ArrayList<Integer>();
@@ -60,15 +60,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void jawaban(View view)
     {
-        correct = findViewById(R.id.correct);
+
         points = findViewById(R.id.point);
 
             if(view.getTag().toString().equals(Integer.toString(lokasiJawaban)))
             {
-                correct.setText("Correct !");
+                konfirm.setText("Correct !");
                 score++;
             } else {
-                correct.setText("Wrong !");
+                konfirm.setText("Wrong !");
             }
 
             nomorSoal++;
@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         papanSkor = findViewById(R.id.papanSkor);
         mulai = findViewById(R.id.mulai);
         points = findViewById(R.id.point);
+        konfirm = findViewById(R.id.konfirm);
 
         generateSoal();
 
@@ -147,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
+                konfirm.setText("");
 
                     papanSkor.setVisibility(View.INVISIBLE);
 
